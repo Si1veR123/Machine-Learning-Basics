@@ -1,0 +1,12 @@
+Activation Functions =  used to get an output from a neuron. Often non-linear to increase complexity
+
+sigmoid = between 0 and 1, often used for probability
+tanh = between -1 and 1, often used for classification
+relu = any number below 0 is 0, any number above 0 is the same
+leaky relu = like relu, but has a shallow gradient below 0 to stop killing a signal below 0
+
+Use print([func for func in dir(keras.activations) if func[0] != '_']) to get activation functions from keras
+
+OUTPUT
+Should be linear for regression
+softmax for classification(you get a probability for each output neuron)

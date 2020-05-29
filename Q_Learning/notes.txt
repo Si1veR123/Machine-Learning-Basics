@@ -1,0 +1,20 @@
+Aim of Q Learning is to construct a table where the agent can look up the environment variables and find an action to take.
+e.g.
+C(n) = a combination of environment variables
+Q VAL = a number that represents how 'good' it is to do that action at the current state. Action with highest Q value is used.
+
+---------------------------
+|  |Action1|Action2|Action3|
+|C1|Q VAL  |Q VAL  |Q VAL  |
+|C2|Q VAL  |Q VAL  |Q VAL  |
+|C3|Q VAL  |Q VAL  |Q VAL  |
+|C4|Q VAL  |Q VAL  |Q VAL  |
+|C5|Q VAL  |Q VAL  |Q VAL  |
+|C6|Q VAL  |Q VAL  |Q VAL  |
+|C7|Q VAL  |Q VAL  |Q VAL  |
+----------------------------
+
+get best action for current state
+perform action
+get new state
+update q value for previous move

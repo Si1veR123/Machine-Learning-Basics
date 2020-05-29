@@ -1,0 +1,56 @@
+Rules:
+ALWAYS:
+Check if we can win
+Check if other could win, if so, block
+(copy board, perform action and see if anyone won)
+
+If first:
+Go on corner first move #1
+Go on middle next move #3
+    if can't:
+        go on opposite corner of first move #3
+        if other player goes on one of the 2 remaining corners:
+            go on final corner #5
+        else:
+            block remaining moves (draw) #5
+
+    else (if middle isn't taken):
+        go on middle #3
+        if other player in winning position:
+            block #5
+        else:
+            go in any free block adjacent to the starting block #5
+
+If second:
+if other player goes in corner:
+    go in middle #2
+    if next player move is in corner:
+        go on a side #4
+        continue to block (draw) #6
+    else (player moves on side):
+        if player can win next round:
+            block (draw) #4
+        else (player can't win):
+            choose place with empty row, col or diag (possible to win next of opponent misses space) #4
+
+else (player on edge):
+    go center #2
+    if player goes opposite prev move:
+        go corner #4
+    else (player adjacent prev move):
+        block (draw) #4
+
+    else (player on side):
+        go corner next to both of other player #4
+        then choose place with empty row, col or diag (possible to win next of opponent misses space) #6
+
+    else (player on corner):
+        go side,  not opposite other's first move #4
+        block (draw) #6
+
+else (player in middle): =========
+    go corner #2
+    if other player goes corner:
+        choose place with empty row, col or diag (possible to win next of opponent misses space) OR BLOCK #4
+    else (player goes side):
+        block #4
